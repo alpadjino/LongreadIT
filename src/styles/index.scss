@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+p {
+  text-indent: 15px;
+}
+
+h1, h3, p {
+  font-family: "Proxima Nova";
+}
+
+h3 {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  // font-style: italic;
+  font-family: 'PT Serif';
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a {
+  font-size: 18px;
+  color: white;
+}
+
+a:link {
+  border-bottom: 1px dashed;
+  cursor: pointer; 
+}
+a:visited {
+  color: rgb(223, 223, 223);
+}
+a:hover {
+  color: #154088; 
+  border-bottom: .07em solid;
+}
+a:active {
+  color: #497DDD; 
+  border-bottom: 1px dashed;
+}
+
+img {
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.01); /* Легкое увеличение */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); 
+}

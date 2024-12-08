@@ -1,0 +1,155 @@
+
+.container {
+	display: flex;
+  font-family: 'Proxima Nova';
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb {
+	// margin-left: -2px;
+  max-width: 400px;
+	&:first-child {
+		a {
+			// border-radius: 8px 0 0 8px;
+		}
+	}
+	&:last-child {
+		a {
+			// border-radius: 0 8px 8px 0;
+		}
+	}
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%;
+  // left: 0;
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.subMenu li {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left; 
+}
+
+.subMenu li a {
+  min-height: 50px;
+  color: white;
+  width: 100%;
+  text-decoration: none;
+}
+
+.link {
+	// background-color: #fff;
+	color: #6b7280;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 400;
+	// border: 2px solid #d1d5db;
+	height: 100%;
+  padding: 0.5em 1.5em;
+	border-radius: 0;
+  background-color: black;
+	// transform: skew(-30deg);
+	position: relative;
+	transition: color 0.15s ease, border-color 0.15s ease;
+
+	&:hover,
+	&:focus,
+	&.active {
+		outline: 0;
+		color: #6366f1;
+		border-color: #6366f1;
+		z-index: 1;
+	}
+
+	// & > * {
+	// 	transform: skew(30deg);
+	// }
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			margin-right: 0.375em;
+			width: 1.5em;
+			height: 1.5em;
+		}
+	}
+}
+
+.subLink {
+	// background-color: #fff;
+	color: #6b7280;
+	display: inline-flex;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 400;
+	// border: 2px solid #d1d5db;
+	height: 100%;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	border-radius: 0;
+  background-color: black;
+	// transform: skew(-30deg);
+	position: relative;
+	transition: color 0.15s ease, border-color 0.15s ease;
+
+	&:hover,
+	&:focus,
+	&.active {
+		outline: 0;
+		color: #6366f1;
+		border-color: #6366f1;
+		z-index: 1;
+	}
+
+	// & > * {
+	// 	transform: skew(30deg);
+	// }
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			margin-right: 0.375em;
+			width: 1.5em;
+			height: 1.5em;
+		}
+	}
+}
+
+summary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+	cursor: pointer;
+	&::-webkit-details-marker {
+		display: none;
+	}
+	
+	&:hover, &:focus {
+		color: #6366f1;
+	}
+
+	svg {
+		margin-left: 0.25em;
+		width: 1.5em;
+		height: 1.5em;
+	}
+}

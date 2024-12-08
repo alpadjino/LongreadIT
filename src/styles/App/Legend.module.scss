@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  max-width: 500px;
+
+  border: 1px solid white;
+  text-indent: 0;
+}
+
+.image {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 93%;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'PT Sans Caption';
+  border-left: 1px solid white;
+
+  p {
+    padding-left: 5px;
+    font-size: 12px;
+    margin: auto 0;
+  }
+}
+
+.chapter {
+  text-transform: uppercase;
+}
+
+.signature {
+  font-weight: bold;
+}
