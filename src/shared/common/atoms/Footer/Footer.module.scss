@@ -1,0 +1,98 @@
+.wrap {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+.lightings {
+  bottom: -60px;
+  position: absolute;
+  width: 100%;
+}
+
+section {
+  /*border-radius*/
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 20px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.one {
+  /*animation*/
+  animation: one 5s ease-in-out infinite alternate;
+  
+  @keyframes one {
+    from {
+      box-shadow: 0 0 250px 20px #473C78;
+    }
+    to {
+      box-shadow: 0 0 100px 15px white;
+    }
+  }
+}
+
+.two {
+  width: 90%;
+  /*animation*/
+  animation: two 4s ease-in-out infinite alternate;
+  
+  @keyframes two {
+    from {
+      box-shadow: 0 0 250px 20px blueviolet;
+    }
+    to {
+      box-shadow: 0 0 100px 15px blue;
+    }
+  }
+}
+
+.three {
+  width: 80%;
+  /*animation*/
+  animation: three 3s ease-in-out infinite alternate;
+  
+  @keyframes three {
+    from {
+      box-shadow: 0 0 250px 20px whitesmoke;
+    }
+    to {
+      box-shadow: 0 0 100px 15px #3E33FF;
+    }
+  }
+}
+
+.four {
+  width: 70%;
+  /*animation*/
+  animation: four 2s ease-in-out infinite alternate;
+  
+  @keyframes four {
+    from {
+      box-shadow: 0 0 250px 20px #781848;
+    }
+    to {
+      box-shadow: 0 0 100px 15px #F2BBE9;
+    }
+  }
+}
+
+.five {
+  width: 60%;
+  /*animation*/
+  animation: five 1s ease-in-out infinite alternate;
+  
+  @keyframes five {
+    from {
+      box-shadow: 0 0 250px 20px #42F2A1;
+    }
+    to {
+      box-shadow: 0 0 100px 15px #F4F6AD;
+    }
+  }
+}

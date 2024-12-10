@@ -28,6 +28,10 @@
   img {
     max-height: 500px;
   }
+
+  h3 {
+    margin-bottom: revert-layer;
+  }
 }
 
 .flicking__panel {
@@ -62,4 +66,17 @@
 
 .flicking__panel .cardPanel:nth-child(6) {
   transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .cardPanel {
+    h3 {
+      font-size: 18px;
+      margin-bottom: revert-layer;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
 }

@@ -27,7 +27,7 @@ export const ImageOverlay = ({ image, source }) => {
             alt="Изображение"
             onClick={switchIsOpenImage}
             className={styles.defaultImage}
-            style={{ maxWidth: '100%', maxHeight: '100%' }}
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
           />
           <div
             style={{
@@ -36,7 +36,7 @@ export const ImageOverlay = ({ image, source }) => {
               paddingTop: "10px",
             }}
           >
-            <a href="#">Источник: {source}</a>
+            <a href={source}>Источник: {source}</a>
           </div>
         </div>
       ) : (

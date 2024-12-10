@@ -7,16 +7,37 @@ import styles from "@styles/App/Carousel.module.scss";
 
 export default class DemoComponent extends Component {
   _plugins = [new Perspective({ rotate: 0.2 }), new Arrow()];
-  
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentIndex: 0,
+    };
+  }
+
   images = this.props.images;
   
+  componentDidMount() {
+    this.setState({ currentIndex: 0 });
+  }
+
+  handleMove = (e) => {
+    this.setState({ currentIndex: e.index });
+  };
+
   render() {
     return (
       <div className={styles.carouselContainer}>
         {this.images && (
-          <Flicking plugins={this._plugins} style={{ overflow: "visible" }}>
-            {this.images.map((image) => (
+          <Flicking
+            key={this.state.currentIndex}
+            plugins={this._plugins}
+            style={{ overflow: "visible" }}
+            onMove={this.handleMove}
+          >
+            {this.images.map((image, index) => (
               <div
+                key={index + 1}
                 style={{ position: "relative" }}
                 className={styles.cardPanel}
               >
@@ -26,12 +47,21 @@ export default class DemoComponent extends Component {
                     height: "100%",
                     width: "100%",
                     pointerEvents: "none",
-                    filter: image.image ? "brightness(50%)" : '',
+                    filter: image.image ? "brightness(50%)" : "",
                   }}
                   src={image.image ?? image}
                 />
                 {image.text && (
-                  <div style={{ position: "absolute" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      alignItems: "inherit",
+                      textAlign: "center",
+                    }}
+                  >
                     {image.text.title && <h3>{image.text.title}</h3>}
                     {image.text.text && <p>{image.text.text}</p>}
                   </div>

@@ -31,3 +31,13 @@
 .title {
   font-size: 50px;
 }
+
+@media (max-width: 768px) {
+  .longread {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  };
+}

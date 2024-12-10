@@ -69,3 +69,14 @@
   transform: scale(1.01); /* Легкое увеличение */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+@media (max-width: 768px) {
+  .defaultImage {
+    max-width: 100%;
+  }
+
+  .shadowBorder div {
+    position: relative;
+    right: -20px;
+  }
+}

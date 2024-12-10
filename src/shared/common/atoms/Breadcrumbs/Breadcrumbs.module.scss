@@ -132,7 +132,7 @@
 	}
 }
 
-summary {
+.summary {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -152,4 +152,40 @@ summary {
 		width: 1.5em;
 		height: 1.5em;
 	}
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .breadcrumb {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .subMenu {
+    position: static;
+    display: none;
+    width: 100%;
+    background-color: #000;
+  }
+
+  .subMenu.active {
+    display: block;
+  }
+
+  .link, .subLink {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .summary {
+    font-size: 1rem;
+    padding: 0.5em 0;
+  }
 }

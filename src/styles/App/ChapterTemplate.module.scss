@@ -85,7 +85,6 @@
   gap: 10px;
 }
 
-/* Первый контейнер: текст слева, изображение справа */
 .contentBlock:nth-child(3n+1) {
   grid-template-columns: 1fr 1fr;
 
@@ -112,7 +111,6 @@
   }
 }
 
-/* Третий контейнер: текст по центру, изображение под ним */
 .contentBlock:nth-child(3n+3) {
   grid-template-columns: 1fr;
 
@@ -129,11 +127,30 @@
 }
 
 @media (max-width: 768px) {
-  .contentBlock {
-    grid-template-columns: 1fr;
+  .chapter {
+    padding: 20px;
   }
-  .contentBlock:nth-child(3n+2) .textBlock,
-  .contentBlock:nth-child(3n+2) .contentImage {
+  
+  .contentBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .contentBlock:nth-child(3n+1),
+  .contentBlock:nth-child(3n+2),
+  .contentBlock:nth-child(3n+3) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contentBlock .textBlock,
+  .contentBlock .contentImage {
     grid-column: span 1;
+    justify-content: center; /* Центрирование содержимого */
+  }
+
+  .content {
+    flex-direction: column-reverse;
   }
 }
