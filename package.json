@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://alpadjino.github.io/LongreadIT",
+  "homepage": "https://alpadjino.github.io/LongreadIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
